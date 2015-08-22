@@ -1,0 +1,677 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic");
+html {
+  width: 100%;
+  background-color: white;
+  font-family: "Open Sans";
+  font-weight: 400;
+}
+
+body {
+  width: 900px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 905px) and (min-width: 605px) {
+  body {
+    width: 600px;
+  }
+}
+@media (max-width: 605px), handheld {
+  body {
+    width: 300px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans Light","Open Sans";
+  font-weight: 100;
+}
+
+.bg-tile {
+  float: left;
+  width: 290px;
+  height: 290px;
+  margin: 5px;
+  background-clip: padding-box;
+}
+.bg-tile p, .bg-tile h1, .bg-tile h2, .bg-tile h3, .bg-tile h4, .bg-tile h5, .bg-tile h6 {
+  padding: 20px;
+  padding-bottom: 0px;
+  line-height: 10px;
+}
+
+.md-tile {
+  float: left;
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+  background-clip: padding-box;
+}
+.md-tile p, .md-tile h1, .md-tile h2, .md-tile h3, .md-tile h4, .md-tile h5, .md-tile h6 {
+  padding: 20px;
+  padding-bottom: 0px;
+  line-height: 10px;
+}
+
+.sm-tile {
+  float: left;
+  width: 65px;
+  height: 65px;
+  margin: 5px;
+  background-clip: padding-box;
+}
+.sm-tile p, .sm-tile h1, .sm-tile h2, .sm-tile h3, .sm-tile h4, .sm-tile h5, .sm-tile h6 {
+  padding: 20px;
+  padding-bottom: 0px;
+  line-height: 10px;
+}
+
+.md-row {
+  float: left;
+  width: 290px;
+  height: 140px;
+  margin: 5px;
+  background-clip: padding-box;
+}
+.md-row p, .md-row h1, .md-row h2, .md-row h3, .md-row h4, .md-row h5, .md-row h6 {
+  padding: 20px;
+  padding-bottom: 0px;
+  line-height: 10px;
+}
+
+.sm-row {
+  float: left;
+  width: 140px;
+  height: 65px;
+  margin: 5px;
+  background-clip: padding-box;
+}
+.sm-row p, .sm-row h1, .sm-row h2, .sm-row h3, .sm-row h4, .sm-row h5, .sm-row h6 {
+  padding: 20px;
+  padding-bottom: 0px;
+  line-height: 10px;
+}
+
+.bg-container {
+  float: left;
+  width: 300px;
+  height: 300px;
+  background-clip: padding-box;
+}
+
+.md-container {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-clip: padding-box;
+}
+
+.sm-container {
+  float: left;
+  width: 75px;
+  height: 75px;
+  background-clip: padding-box;
+}
+
+.red-tile {
+  background-color: #AA0000;
+  color: white;
+}
+.red-tile:hover {
+  background-color: #dd0000;
+}
+.red-tile:active {
+  background-color: #770000;
+}
+
+.green-tile {
+  background-color: #10AA10;
+  color: white;
+}
+.green-tile:hover {
+  background-color: #14d914;
+}
+.green-tile:active {
+  background-color: #0c7b0c;
+}
+
+.blue-tile {
+  background-color: #0050CA;
+  color: white;
+}
+.blue-tile:hover {
+  background-color: #0064fd;
+}
+.blue-tile:active {
+  background-color: #003c97;
+}
+
+.yellow-tile {
+  background-color: #AAAA00;
+  color: white;
+}
+.yellow-tile:hover {
+  background-color: #dddd00;
+}
+.yellow-tile:active {
+  background-color: #777700;
+}
+
+.purple-tile {
+  background-color: #800AA0;
+  color: white;
+}
+.purple-tile:hover {
+  background-color: #a60dd0;
+}
+.purple-tile:active {
+  background-color: #5a0770;
+}
+
+.separator {
+  display: block;
+  width: 100%;
+  height: 20px;
+  float: left;
+}
+
+.button {
+  height: 30px;
+  border: none;
+  font-family: "Open Sans Light", "Open Sans";
+  font-weight: 300;
+  font-size: 20px;
+}
+.button.hgl {
+  width: 300px;
+}
+.button.bgl {
+  width: 225px;
+}
+.button.mdl {
+  width: 150px;
+}
+.button.sml {
+  width: 75px;
+}
+
+.form-element {
+  display: block;
+  float: left;
+  height: 25px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.form-element label {
+  display: block;
+  float: left;
+}
+.form-element label.bgl {
+  width: 300px;
+}
+.form-element label.mdl {
+  width: 225px;
+}
+.form-element label.sml {
+  width: 150px;
+}
+.form-element .text-input {
+  border: solid #606060 1px;
+  background-color: white;
+}
+.form-element .text-input:active {
+  border: solid white 1px;
+  background-color: gray;
+  color: white;
+}
+.form-element .text-input.bgl {
+  width: 446px;
+}
+.form-element .text-input.mdl {
+  width: 296px;
+}
+.form-element .text-input.sml {
+  width: 146px;
+}
+.form-element input {
+  margin-left: 0px;
+  margin-right: 0px;
+  float: left;
+}
+.form-element input.bgl {
+  width: 298px;
+}
+.form-element input.mdl {
+  width: 223px;
+}
+.form-element input.sml {
+  width: 148px;
+}
+@media (max-width: 905px), handheld {
+  .form-element {
+    height: 100%;
+  }
+  .form-element label.bgl {
+    width: 300px;
+  }
+  .form-element label.mdl {
+    width: 300px;
+  }
+  .form-element label.sml {
+    width: 150px;
+  }
+  .form-element .text-input.bgl {
+    width: 296px;
+  }
+  .form-element .text-input.mdl {
+    width: 296px;
+  }
+  .form-element .text-input.sml {
+    width: 146px;
+  }
+  .form-element input.bgl {
+    width: 298px;
+  }
+  .form-element input.mdl {
+    width: 298px;
+  }
+  .form-element input.sml {
+    width: 148px;
+  }
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #606060;
+  border-radius: 0px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid white;
+  height: 22px;
+  width: 11px;
+  background: #606060;
+  border-radius: 0px;
+  cursor: pointer;
+  margin-top: -14px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #606060;
+  border-radius: 0px;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 1px solid white;
+  height: 22px;
+  width: 11px;
+  background: #606060;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  float: left;
+  width: 100%;
+  height: 8px;
+  background-color: #C0C0C0;
+}
+.progress-bar .progress {
+  float: left;
+  height: 8px;
+  background-color: #0064fd;
+}
+.progress-bar .progress.p-0 {
+  width: 0%;
+}
+.progress-bar .progress.p-1 {
+  width: 1%;
+}
+.progress-bar .progress.p-2 {
+  width: 2%;
+}
+.progress-bar .progress.p-3 {
+  width: 3%;
+}
+.progress-bar .progress.p-4 {
+  width: 4%;
+}
+.progress-bar .progress.p-5 {
+  width: 5%;
+}
+.progress-bar .progress.p-6 {
+  width: 6%;
+}
+.progress-bar .progress.p-7 {
+  width: 7%;
+}
+.progress-bar .progress.p-8 {
+  width: 8%;
+}
+.progress-bar .progress.p-9 {
+  width: 9%;
+}
+.progress-bar .progress.p-10 {
+  width: 10%;
+}
+.progress-bar .progress.p-11 {
+  width: 11%;
+}
+.progress-bar .progress.p-12 {
+  width: 12%;
+}
+.progress-bar .progress.p-13 {
+  width: 13%;
+}
+.progress-bar .progress.p-14 {
+  width: 14%;
+}
+.progress-bar .progress.p-15 {
+  width: 15%;
+}
+.progress-bar .progress.p-16 {
+  width: 16%;
+}
+.progress-bar .progress.p-17 {
+  width: 17%;
+}
+.progress-bar .progress.p-18 {
+  width: 18%;
+}
+.progress-bar .progress.p-19 {
+  width: 19%;
+}
+.progress-bar .progress.p-20 {
+  width: 20%;
+}
+.progress-bar .progress.p-21 {
+  width: 21%;
+}
+.progress-bar .progress.p-22 {
+  width: 22%;
+}
+.progress-bar .progress.p-23 {
+  width: 23%;
+}
+.progress-bar .progress.p-24 {
+  width: 24%;
+}
+.progress-bar .progress.p-25 {
+  width: 25%;
+}
+.progress-bar .progress.p-26 {
+  width: 26%;
+}
+.progress-bar .progress.p-27 {
+  width: 27%;
+}
+.progress-bar .progress.p-28 {
+  width: 28%;
+}
+.progress-bar .progress.p-29 {
+  width: 29%;
+}
+.progress-bar .progress.p-30 {
+  width: 30%;
+}
+.progress-bar .progress.p-31 {
+  width: 31%;
+}
+.progress-bar .progress.p-32 {
+  width: 32%;
+}
+.progress-bar .progress.p-33 {
+  width: 33%;
+}
+.progress-bar .progress.p-34 {
+  width: 34%;
+}
+.progress-bar .progress.p-35 {
+  width: 35%;
+}
+.progress-bar .progress.p-36 {
+  width: 36%;
+}
+.progress-bar .progress.p-37 {
+  width: 37%;
+}
+.progress-bar .progress.p-38 {
+  width: 38%;
+}
+.progress-bar .progress.p-39 {
+  width: 39%;
+}
+.progress-bar .progress.p-40 {
+  width: 40%;
+}
+.progress-bar .progress.p-41 {
+  width: 41%;
+}
+.progress-bar .progress.p-42 {
+  width: 42%;
+}
+.progress-bar .progress.p-43 {
+  width: 43%;
+}
+.progress-bar .progress.p-44 {
+  width: 44%;
+}
+.progress-bar .progress.p-45 {
+  width: 45%;
+}
+.progress-bar .progress.p-46 {
+  width: 46%;
+}
+.progress-bar .progress.p-47 {
+  width: 47%;
+}
+.progress-bar .progress.p-48 {
+  width: 48%;
+}
+.progress-bar .progress.p-49 {
+  width: 49%;
+}
+.progress-bar .progress.p-50 {
+  width: 50%;
+}
+.progress-bar .progress.p-51 {
+  width: 51%;
+}
+.progress-bar .progress.p-52 {
+  width: 52%;
+}
+.progress-bar .progress.p-53 {
+  width: 53%;
+}
+.progress-bar .progress.p-54 {
+  width: 54%;
+}
+.progress-bar .progress.p-55 {
+  width: 55%;
+}
+.progress-bar .progress.p-56 {
+  width: 56%;
+}
+.progress-bar .progress.p-57 {
+  width: 57%;
+}
+.progress-bar .progress.p-58 {
+  width: 58%;
+}
+.progress-bar .progress.p-59 {
+  width: 59%;
+}
+.progress-bar .progress.p-60 {
+  width: 60%;
+}
+.progress-bar .progress.p-61 {
+  width: 61%;
+}
+.progress-bar .progress.p-62 {
+  width: 62%;
+}
+.progress-bar .progress.p-63 {
+  width: 63%;
+}
+.progress-bar .progress.p-64 {
+  width: 64%;
+}
+.progress-bar .progress.p-65 {
+  width: 65%;
+}
+.progress-bar .progress.p-66 {
+  width: 66%;
+}
+.progress-bar .progress.p-67 {
+  width: 67%;
+}
+.progress-bar .progress.p-68 {
+  width: 68%;
+}
+.progress-bar .progress.p-69 {
+  width: 69%;
+}
+.progress-bar .progress.p-70 {
+  width: 70%;
+}
+.progress-bar .progress.p-71 {
+  width: 71%;
+}
+.progress-bar .progress.p-72 {
+  width: 72%;
+}
+.progress-bar .progress.p-73 {
+  width: 73%;
+}
+.progress-bar .progress.p-74 {
+  width: 74%;
+}
+.progress-bar .progress.p-75 {
+  width: 75%;
+}
+.progress-bar .progress.p-76 {
+  width: 76%;
+}
+.progress-bar .progress.p-77 {
+  width: 77%;
+}
+.progress-bar .progress.p-78 {
+  width: 78%;
+}
+.progress-bar .progress.p-79 {
+  width: 79%;
+}
+.progress-bar .progress.p-80 {
+  width: 80%;
+}
+.progress-bar .progress.p-81 {
+  width: 81%;
+}
+.progress-bar .progress.p-82 {
+  width: 82%;
+}
+.progress-bar .progress.p-83 {
+  width: 83%;
+}
+.progress-bar .progress.p-84 {
+  width: 84%;
+}
+.progress-bar .progress.p-85 {
+  width: 85%;
+}
+.progress-bar .progress.p-86 {
+  width: 86%;
+}
+.progress-bar .progress.p-87 {
+  width: 87%;
+}
+.progress-bar .progress.p-88 {
+  width: 88%;
+}
+.progress-bar .progress.p-89 {
+  width: 89%;
+}
+.progress-bar .progress.p-90 {
+  width: 90%;
+}
+.progress-bar .progress.p-91 {
+  width: 91%;
+}
+.progress-bar .progress.p-92 {
+  width: 92%;
+}
+.progress-bar .progress.p-93 {
+  width: 93%;
+}
+.progress-bar .progress.p-94 {
+  width: 94%;
+}
+.progress-bar .progress.p-95 {
+  width: 95%;
+}
+.progress-bar .progress.p-96 {
+  width: 96%;
+}
+.progress-bar .progress.p-97 {
+  width: 97%;
+}
+.progress-bar .progress.p-98 {
+  width: 98%;
+}
+.progress-bar .progress.p-99 {
+  width: 99%;
+}
+.progress-bar .progress.p-100 {
+  width: 100%;
+}
+.progress-bar.bottom {
+  position: absolute;
+  bottom: 0px;
+}
+
+.tlm {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.tlm:hover .img-tileb {
+  background-color: white;
+}
+.tlm:hover .img-tileb img {
+  opacity: 0.9;
+}
+.tlm:active .img-tileb {
+  background-color: black;
+}
+.tlm:active .img-tileb img {
+  opacity: 0.9;
+}
+
+.tile-content {
+  position: absolute;
+  top: 0px;
+}
+
+.img-tileb {
+  float: left;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+}
+.img-tileb img {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

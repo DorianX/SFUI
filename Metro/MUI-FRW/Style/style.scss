@@ -1,0 +1,210 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic');
+
+$base-size: 900px;
+$bg: $base-size/3;
+$md: $bg/2;
+$sm: $md/2;
+
+$red: #AA0000;
+$green: #10AA10;
+$blue: #0050CA;
+$yellow: #AAAA00;
+$purple: #800AA0;
+
+html{
+	width: 100%;
+	background-color: white;
+	font-family: "Open Sans";
+	font-weight: 400;
+}
+body{
+	width: $base-size;
+	@media (max-width: $base-size + 5px) and (min-width: $bg*2 + 5px) {width: $bg*2}
+	@media (max-width: $bg*2 + 5px), handheld {width: $bg}
+	margin-top: 10px;margin-left: auto;margin-right: auto;
+	}
+h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
+
+@mixin tile($size)
+{
+	float: left;
+	width: $size - 10px;
+	height: $size - 10px;
+	margin: 5px;
+	background-clip: padding-box;
+	p,h1,h2,h3,h4,h5,h6{padding: 20px;padding-bottom: 0px;
+	line-height: 10px}
+}
+@mixin row-tile($size)
+{
+	float: left;
+	width: $size - 10px;
+	height: $size/2 - 10px;
+	margin: 5px;
+	background-clip: padding-box;
+	p,h1,h2,h3,h4,h5,h6{padding: 20px;padding-bottom: 0px;
+	line-height: 10px}
+}
+@mixin container($size)
+{
+	float: left;
+	width: $size;
+	height: $size;
+	background-clip: padding-box;
+}
+@mixin color-tile($color)
+{
+	background-color: $color;
+	color: white;
+	&:hover{background-color: lighten($color, 10);}
+	&:active{background-color: darken($color, 10);}
+}
+.bg-tile{@include tile($bg)}.md-tile{@include tile($md)}.sm-tile{@include tile($sm)}
+.md-row{@include row-tile($bg)}.sm-row{@include row-tile($md)}
+.bg-container{@include container($bg)}.md-container{@include container($md)}.sm-container{@include container($sm)}
+.red-tile{@include color-tile($red)}.green-tile{@include color-tile($green)}.blue-tile{@include color-tile($blue)}
+.yellow-tile{@include color-tile($yellow)}.purple-tile{@include color-tile($purple)}
+
+.separator
+{
+	display: block;
+	width: 100%;
+	height: 20px;
+	float: left;
+}
+.button
+{
+	height: 30px;
+	border: none;
+	font-family: "Open Sans Light", "Open Sans";
+	font-weight: 300;
+	font-size: 20px;
+	&.hgl{width: $bg;}&.bgl{width: ($bg + $md)/2;}&.mdl{width: $md;}&.sml{width: $sm;}
+}
+
+.form-element
+{
+	display: block;
+	float: left;
+	height: 25px;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+	label
+	{
+		display: block;
+		float: left;
+		&.bgl{width: $bg;}&.mdl{width: ($bg + $md)/2 ;}&.sml{width: $md;}
+	}
+	.text-input
+	{
+		border: solid #606060 1px;
+		background-color: white;
+		&:active
+		{
+			border: solid white 1px;
+			background-color: lighten($color: black, $amount: 50);
+			color: white;
+		}
+		&.bgl{width: $bg + $md - 4px;}&.mdl{width: $bg - 4px;}&.sml{width: $md - 4px;}
+	}
+	input
+	{
+		margin-left: 0px;
+		margin-right: 0px;
+		float:left;
+		&.bgl{width: $bg - 2px;}&.mdl{width: (($bg + $md)/2) - 2px ;}&.sml{width: $md - 2px;}
+	}
+	@media (max-width: $base-size + 5px), handheld {
+		height: 100%;
+		label{&.bgl{width: $bg;}&.mdl{width: $bg;}&.sml{width: $md;}}
+		.text-input{&.bgl{width: $bg - 4px;}&.mdl{width: $bg - 4px;}&.sml{width: $md - 4px;}}
+		input{&.bgl{width: $bg - 2px;}&.mdl{width: $bg - 2px;}&.sml{width: $md - 2px;}}
+	}
+}
+@mixin thumb
+{
+  border: 1px solid white;
+  height: 22px;
+  width: 11px;
+  background: #606060;
+  border-radius: 0px;
+  cursor: pointer;
+}
+@mixin slide
+{
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #606060;
+  border-radius: 0px;
+}
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-runnable-track {@include slide;}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @include thumb;
+  margin-top: -14px;
+}
+input[type=range]::-moz-range-track {@include slide;}
+input[type=range]::-moz-range-thumb {@include thumb;}
+.progress-bar{
+	float: left;
+	width: 100%;
+	height: 8px;
+	background-color: #C0C0C0;
+	.progress{
+		float: left;
+		height: 8px;
+		background-color: lighten($blue, 10);
+		@for $i from 0 through 100 {
+			&.p-#{$i} {
+				width: 1%*$i;
+			}
+		}
+	}
+	&.bottom{position: absolute; bottom: 0px;}
+}
+.tlm
+{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	&:hover
+	{
+		.img-tileb
+		{
+			background-color: white;
+			img
+			{
+				opacity: 0.9;
+			}
+		}
+	}
+	&:active
+	{
+		.img-tileb
+		{
+			background-color: black;
+			img
+			{
+				opacity: 0.9;
+			}
+		}
+	}
+}
+.tile-content
+{
+	position: absolute; top: 0px;
+}
+.img-tileb
+{
+	float: left;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute; top: 0px;
+	img{opacity: 1;}
+}
