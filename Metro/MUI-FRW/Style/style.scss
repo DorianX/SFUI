@@ -11,20 +11,6 @@ $blue: #0050CA;
 $yellow: #AAAA00;
 $purple: #800AA0;
 
-html{
-	width: 100%;
-	background-color: white;
-	font-family: "Open Sans";
-	font-weight: 400;
-}
-body{
-	width: $base-size;
-	@media (max-width: $base-size + 5px) and (min-width: $bg*2 + 5px) {width: $bg*2}
-	@media (max-width: $bg*2 + 5px), handheld {width: $bg}
-	margin-top: 10px;margin-left: auto;margin-right: auto;
-	}
-h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
-
 @mixin tile($size)
 {
 	float: left;
@@ -59,6 +45,39 @@ h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
 	&:hover{background-color: lighten($color, 10);}
 	&:active{background-color: darken($color, 10);}
 }
+@mixin thumb
+{
+  border: 1px solid white;
+  height: 22px;
+  width: 11px;
+  background: #606060;
+  border-radius: 0px;
+  cursor: pointer;
+}
+@mixin slide
+{
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #606060;
+  border-radius: 0px;
+}
+
+html{
+	width: 100%;
+	background-color: white;
+	font-family: "Open Sans";
+	font-weight: 400;
+}
+body{
+	width: $base-size;
+	@media (max-width: $base-size + 5px) and (min-width: $bg*2 + 5px) {width: $bg*2}
+	@media (max-width: $bg*2 + 5px), handheld {width: $bg}
+	margin-top: 10px;margin-left: auto;margin-right: auto;
+	}
+h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
+
+
 .bg-tile{@include tile($bg)}.md-tile{@include tile($md)}.sm-tile{@include tile($sm)}
 .md-row{@include row-tile($bg)}.sm-row{@include row-tile($md)}
 .bg-container{@include container($bg)}.md-container{@include container($md)}.sm-container{@include container($sm)}
@@ -165,23 +184,6 @@ h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
 		.text-input{&.bgl{width: $bg - 4px;}&.mdl{width: $bg - 4px;}&.sml{width: $md - 4px;}}
 		input{&.bgl{width: $bg - 2px;}&.mdl{width: $bg - 2px;}&.sml{width: $md - 2px;}}
 	}
-}
-@mixin thumb
-{
-  border: 1px solid white;
-  height: 22px;
-  width: 11px;
-  background: #606060;
-  border-radius: 0px;
-  cursor: pointer;
-}
-@mixin slide
-{
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  background: #606060;
-  border-radius: 0px;
 }
 /* Special styling for WebKit/Blink */
 input[type=range]::-webkit-slider-runnable-track {@include slide;}
