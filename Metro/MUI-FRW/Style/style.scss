@@ -6,6 +6,8 @@ Alpha 0.1
 Content:
 	- Tile System
 	- Tile widgets
+	- Side menu
+	- Dark theme
 	- Form elements
 */
 $base-size: 900px;
@@ -76,6 +78,11 @@ html{
 	background-color: white;
 	font-family: "Open Sans";
 	font-weight: 400;
+	&.dark
+	{
+		background-color: #1A1A1A;
+		color: white;
+	}
 }
 body{
 	width: $base-size;
@@ -85,6 +92,52 @@ body{
 	}
 h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
 
+nav.sidebar-menu
+{
+	float: left;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: $sm/1.5;
+	height: 100%;
+	z-index: 40;
+	overflow: hidden;
+	font-weight: 300;
+	@media (max-width: $base-size + $sm*2 + 20px), handheld {width: 4px;}
+	&.blue{background-color: darken($blue, 10);ul{background-color: $blue;}}
+	&.red{background-color: darken($red, 10);ul{background-color: $red;}}
+	&.green{background-color: darken($green, 10);ul{background-color: $green;}}
+	&.yellow{background-color: darken($yellow, 10);ul{background-color: $yellow;}}
+	&.purple{background-color: darken($purple, 10);ul{background-color: $purple;}}
+	&:hover
+	{
+		width: $md;
+		ul
+		{
+			left: 0px;
+		}
+	}
+	ul
+	{
+		list-style-type: none;
+		background-clip: border-box;
+		float: left;
+		position: absolute;
+		top: $sm/1.5;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		left: $bg * -1;
+		width: $md+$bg;
+		li
+		{
+			height: $sm/2;
+			padding-left: 7px;
+			line-height: $sm/2;
+			width: $md;
+		}
+	}
+}
 
 .bg-tile{@include tile($bg)}.md-tile{@include tile($md)}.sm-tile{@include tile($sm)}
 .md-row{@include row-tile($bg)}.sm-row{@include row-tile($md)}

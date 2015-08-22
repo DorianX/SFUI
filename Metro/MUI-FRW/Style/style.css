@@ -6,6 +6,8 @@ Alpha 0.1
 Content:
 	- Tile System
 	- Tile widgets
+	- Side menu
+	- Dark theme
 	- Form elements
 */
 html {
@@ -13,6 +15,10 @@ html {
   background-color: white;
   font-family: "Open Sans";
   font-weight: 400;
+}
+html.dark {
+  background-color: #1A1A1A;
+  color: white;
 }
 
 body {
@@ -35,6 +41,77 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans Light","Open Sans";
   font-weight: 100;
+}
+
+nav.sidebar-menu {
+  float: left;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 100%;
+  z-index: 40;
+  overflow: hidden;
+  font-weight: 300;
+}
+@media (max-width: 1070px), handheld {
+  nav.sidebar-menu {
+    width: 4px;
+  }
+}
+nav.sidebar-menu.blue {
+  background-color: #003c97;
+}
+nav.sidebar-menu.blue ul {
+  background-color: #0050CA;
+}
+nav.sidebar-menu.red {
+  background-color: #770000;
+}
+nav.sidebar-menu.red ul {
+  background-color: #AA0000;
+}
+nav.sidebar-menu.green {
+  background-color: #0c7b0c;
+}
+nav.sidebar-menu.green ul {
+  background-color: #10AA10;
+}
+nav.sidebar-menu.yellow {
+  background-color: #777700;
+}
+nav.sidebar-menu.yellow ul {
+  background-color: #AAAA00;
+}
+nav.sidebar-menu.purple {
+  background-color: #5a0770;
+}
+nav.sidebar-menu.purple ul {
+  background-color: #800AA0;
+}
+nav.sidebar-menu:hover {
+  width: 150px;
+}
+nav.sidebar-menu:hover ul {
+  left: 0px;
+}
+nav.sidebar-menu ul {
+  list-style-type: none;
+  background-clip: border-box;
+  float: left;
+  position: absolute;
+  top: 50px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  left: -300px;
+  width: 450px;
+}
+nav.sidebar-menu ul li {
+  height: 37.5px;
+  padding-left: 7px;
+  line-height: 37.5px;
+  width: 150px;
 }
 
 .bg-tile {
