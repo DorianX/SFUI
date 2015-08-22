@@ -1,0 +1,9 @@
+# Ignore everything:
+*
+
+# Except for the themes directories:
+
+!Metro/MUI-FRW/*
+!Metro/MUI-FRW/*/*
+!Metro/MUI-FRW/*/*/*
+!.gitignore
