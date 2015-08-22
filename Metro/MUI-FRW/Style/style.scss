@@ -65,6 +65,49 @@ h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
 .red-tile{@include color-tile($red)}.green-tile{@include color-tile($green)}.blue-tile{@include color-tile($blue)}
 .yellow-tile{@include color-tile($yellow)}.purple-tile{@include color-tile($purple)}
 
+.tlm
+{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	&:hover
+	{
+		.img-tileb
+		{
+			background-color: white;
+			img
+			{
+				opacity: 0.9;
+			}
+		}
+	}
+	&:active
+	{
+		.img-tileb
+		{
+			background-color: black;
+			img
+			{
+				opacity: 0.9;
+			}
+		}
+	}
+}
+.tile-content
+{
+	position: absolute; top: 0px;
+}
+.img-tileb
+{
+	float: left;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute; top: 0px;
+	img{opacity: 1;}
+}
+
 .separator
 {
 	display: block;
@@ -165,46 +208,4 @@ input[type=range]::-moz-range-thumb {@include thumb;}
 		}
 	}
 	&.bottom{position: absolute; bottom: 0px;}
-}
-.tlm
-{
-	height: 100%;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-	&:hover
-	{
-		.img-tileb
-		{
-			background-color: white;
-			img
-			{
-				opacity: 0.9;
-			}
-		}
-	}
-	&:active
-	{
-		.img-tileb
-		{
-			background-color: black;
-			img
-			{
-				opacity: 0.9;
-			}
-		}
-	}
-}
-.tile-content
-{
-	position: absolute; top: 0px;
-}
-.img-tileb
-{
-	float: left;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	position: absolute; top: 0px;
-	img{opacity: 1;}
 }

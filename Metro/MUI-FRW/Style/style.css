@@ -169,6 +169,42 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #5a0770;
 }
 
+.tlm {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.tlm:hover .img-tileb {
+  background-color: white;
+}
+.tlm:hover .img-tileb img {
+  opacity: 0.9;
+}
+.tlm:active .img-tileb {
+  background-color: black;
+}
+.tlm:active .img-tileb img {
+  opacity: 0.9;
+}
+
+.tile-content {
+  position: absolute;
+  top: 0px;
+}
+
+.img-tileb {
+  float: left;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+}
+.img-tileb img {
+  opacity: 1;
+}
+
 .separator {
   display: block;
   width: 100%;
@@ -636,42 +672,6 @@ input[type=range]::-moz-range-thumb {
 .progress-bar.bottom {
   position: absolute;
   bottom: 0px;
-}
-
-.tlm {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.tlm:hover .img-tileb {
-  background-color: white;
-}
-.tlm:hover .img-tileb img {
-  opacity: 0.9;
-}
-.tlm:active .img-tileb {
-  background-color: black;
-}
-.tlm:active .img-tileb img {
-  opacity: 0.9;
-}
-
-.tile-content {
-  position: absolute;
-  top: 0px;
-}
-
-.img-tileb {
-  float: left;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0px;
-}
-.img-tileb img {
-  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
