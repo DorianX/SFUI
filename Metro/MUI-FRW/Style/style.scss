@@ -91,7 +91,10 @@ body{
 	margin-top: 10px;margin-left: auto;margin-right: auto;
 	}
 h1,h2,h3,h4,h5,h6{font-family: "Open Sans Light","Open Sans";font-weight: 100;}
-
+.sui-symbol
+{
+	font-family: "Segoe UI Symbol";
+}
 nav.sidebar-menu
 {
 	float: left;
@@ -103,6 +106,8 @@ nav.sidebar-menu
 	z-index: 40;
 	overflow: hidden;
 	font-weight: 300;
+	-webkit-transition: width 0.4s;
+    transition: width 0.4s;
 	@media (max-width: $base-size + $sm*2 + 20px), handheld {width: 4px;}
 	&.blue{background-color: darken($blue, 10);ul{background-color: $blue;}}
 	&.red{background-color: darken($red, 10);ul{background-color: $red;}}
@@ -112,6 +117,13 @@ nav.sidebar-menu
 	&:hover
 	{
 		width: $md;
+		ul
+		{
+			left: 0px;
+		}
+	}
+	&.deployed
+	{width: $md;
 		ul
 		{
 			left: 0px;
@@ -129,6 +141,8 @@ nav.sidebar-menu
 		margin: 0px;
 		left: $bg * -1;
 		width: $md+$bg;
+		-webkit-transition: left 0.4s;
+    	transition: left 0.4s;
 		li
 		{
 			height: $sm/2;
@@ -185,6 +199,8 @@ nav.sidebar-menu
 	width: 100%;
 	overflow: hidden;
 	position: absolute; top: 0px;
+	-webkit-transition: top 0.5s;
+    transition: top 0.5s;
 	img{opacity: 1;}
 }
 
@@ -264,6 +280,8 @@ input[type=range]::-moz-range-thumb {@include thumb;}
 		float: left;
 		height: 8px;
 		background-color: lighten($blue, 10);
+		-webkit-transition: width 0.5s;
+    	transition: width 0.5s;
 		@for $i from 0 through 100 {
 			&.p-#{$i} {
 				width: 1%*$i;

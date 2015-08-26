@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
 }
 
+.sui-symbol {
+  font-family: "Segoe UI Symbol";
+}
+
 nav.sidebar-menu {
   float: left;
   position: fixed;
@@ -53,6 +57,8 @@ nav.sidebar-menu {
   z-index: 40;
   overflow: hidden;
   font-weight: 300;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
 }
 @media (max-width: 1070px), handheld {
   nav.sidebar-menu {
@@ -95,6 +101,12 @@ nav.sidebar-menu:hover {
 nav.sidebar-menu:hover ul {
   left: 0px;
 }
+nav.sidebar-menu.deployed {
+  width: 150px;
+}
+nav.sidebar-menu.deployed ul {
+  left: 0px;
+}
 nav.sidebar-menu ul {
   list-style-type: none;
   background-clip: border-box;
@@ -106,6 +118,8 @@ nav.sidebar-menu ul {
   margin: 0px;
   left: -300px;
   width: 450px;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
 }
 nav.sidebar-menu ul li {
   height: 37.5px;
@@ -286,6 +300,8 @@ nav.sidebar-menu ul li {
   overflow: hidden;
   position: absolute;
   top: 0px;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
 }
 .img-tileb img {
   opacity: 1;
@@ -451,6 +467,8 @@ input[type=range]::-moz-range-thumb {
   float: left;
   height: 8px;
   background-color: #0064fd;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 .progress-bar .progress.p-0 {
   width: 0%;
